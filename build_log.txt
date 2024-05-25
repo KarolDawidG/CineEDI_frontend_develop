@@ -1,0 +1,8 @@
+
+> frontend@0.0.0 build
+> tsc && vite build
+
+src/components/Basket/FinalizingOrder.tsx(45,13): error TS6133: 'response' is declared but its value is never read.
+src/components/Vhs/hooks/useSearch.tsx(24,31): error TS6133: 'event' is declared but its value is never read.
+src/pages/auth_user/adminComponents/tableUtils/PaginationControl.tsx(7,31): error TS6133: 'event' is declared but its value is never read.
+src/pages/auth_user/adminComponents/tableUtils/SortingControl.tsx(33,32): error TS6133: 'event' is declared but its value is never read.

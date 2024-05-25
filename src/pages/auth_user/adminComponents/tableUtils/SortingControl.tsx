@@ -30,7 +30,7 @@ const useSorting = (defaultOrderBy: string) => {
         return stabilizedThis.map((el) => el[0]);
     };
 
-    const handleRequestSort = (event: React.MouseEvent<unknown>, property: any) => {
+    const handleRequestSort = (property: any) => {
         const isAsc = orderBy === property && order === 'asc';
         setOrder(isAsc ? 'desc' : 'asc');
         setOrderBy(property);

@@ -42,7 +42,7 @@ const FinalizingOrder = () => {
     }));
 
     try {
-      const response = await axios.post(`${BACKEND}/orders`, { items: orderItems });
+      await axios.post(`${BACKEND}/orders`, { items: orderItems });
       clearCart();
       notify('The order has been successfully shipped!');
     } catch (error: any) {

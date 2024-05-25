@@ -4,7 +4,7 @@ export const usePaginationLogic = () => {
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(5);
 
-    const handleChangePage = (event: any, newPage: number) => {
+    const handleChangePage = ( newPage: number) => {
         setPage(newPage);
     };
 
