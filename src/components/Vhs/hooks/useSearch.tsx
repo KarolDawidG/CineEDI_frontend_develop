@@ -21,9 +21,9 @@ export const useSearch = (vhsList: VHS[]) => {
     setSelectedYear(event.target.value);
   };
 
-  const handleRatingChange = ( newValue: number | number[]) => {
-    setSelectedRating(newValue as number | number[]);
-  };
+  const handleRatingChange = (_: Event, newValue: number | number[], _activeThumb: number) => {
+    setSelectedRating(newValue);
+  };  
 
   const handleAvailabilityChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setAvailability(event.target.checked);
