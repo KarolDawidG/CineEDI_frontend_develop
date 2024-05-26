@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Line } from 'react-chartjs-2';
 import { Chart, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
+import { BACKEND } from '../../utils/linkt';
 
 Chart.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
@@ -22,7 +23,7 @@ const UserChart: React.FC<SalesChartProps> = ({ userId }) => {
 
     const fetchData = async () => {
       try {
-        const url = `http://localhost:3001/analizing/user/${userId}`;
+        const url = `${BACKEND}/analizing/user/${userId}`;
         const response = await axios.get(url);
         setSalesData(response.data);
       } catch (error) {
